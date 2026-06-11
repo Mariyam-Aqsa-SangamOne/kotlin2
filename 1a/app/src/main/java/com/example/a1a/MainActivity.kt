@@ -29,9 +29,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             _1aTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    CatandDogScreen(
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    AppNavigation()
                 }
             }
         }
@@ -39,10 +37,3 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@Preview(showBackground = true)
-@Composable
-fun CatScreenPreview() {
-    _1aTheme {
-        CatandDogScreen()
-    }
-}

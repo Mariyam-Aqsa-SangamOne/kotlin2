@@ -11,9 +11,16 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
 
 @Composable
-fun CatandDogScreen(modifier: Modifier = Modifier) {
+fun CatandDogScreen(
+    navController: NavController,
+    modifier: Modifier = Modifier
+    ) {
     val context= LocalContext.current
     val catsound= MediaPlayer.create(
         context,
@@ -23,31 +30,42 @@ fun CatandDogScreen(modifier: Modifier = Modifier) {
         context,
         R.raw.bowbow
     )
-    Row(
-        modifier=modifier
-    ){
-        Image(
-            painter=painterResource(id=R.drawable.cat),
-            contentDescription = "Cat",
-            modifier=modifier
-                .size(250.dp)
-                .clickable{
-                    catsound.start()
-                },
-            contentScale = ContentScale.Fit
-        )
-        Image(
-            painter=painterResource(id=R.drawable.dog),
-            contentDescription = "Dog",
-            modifier=modifier
-                .size(250.dp)
-                .clickable{
-                    dogsound.start()
-                },
-            contentScale = ContentScale.Fit
-        )
 
+    Column{
+        Row(
+            modifier=modifier
+        ){
+            Image(
+                painter=painterResource(id=R.drawable.cat),
+                contentDescription = "Cat",
+                modifier=modifier
+                    .size(250.dp)
+                    .clickable{
+                        catsound.start()
+                    },
+                contentScale = ContentScale.Fit
+            )
+            Image(
+                painter=painterResource(id=R.drawable.dog),
+                contentDescription = "Dog",
+                modifier=modifier
+                    .size(250.dp)
+                    .clickable{
+                        dogsound.start()
+                    },
+                contentScale = ContentScale.Fit
+            )
+
+        }
+        Button(
+            onClick = {
+                navController.navigate("catScreen")
+            }
+        ) {
+            Text("Previous")
+        }
     }
+
 
 
 }
