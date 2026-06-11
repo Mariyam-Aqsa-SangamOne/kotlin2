@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             _1aTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    CatScreen(
+                    CatandDogScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -43,6 +43,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun CatScreenPreview() {
     _1aTheme {
-        CatScreen()
+        CatandDogScreen()
     }
 }
