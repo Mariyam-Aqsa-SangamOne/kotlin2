@@ -500,3 +500,5 @@ When the user touches the cat image, the "meow" sound should play.
   When the Dog image is clicked, the BowBow sound will play.
 
 
+## Assignment 1 - Animals and Sounds
+1a) Show a picture of a Cat. If you click on the Cat, a sound "Meeoo" should be heard 1b) Show a picture of a Cat and a Dog next to each other. If you click on the Cat, a sound "Meeeoo" should be heard. If you click on the Dog, a sound "BowBow" should be heard. 1c) Show a gallery of 20 animals with their names below each photograph using 2 rows and 10 columns. Implement a vertical scrollbar. 1d) Implement a search bar to type the name - If "C" is typed, it should show only Cow and Camel. If "CA" is typed, it should only the picture of camel. 1e) Build a list of 100 animals (birds, reptiles, insects, fish can be added). Search using a Voice Interface. eg. If you say "Crocodile" only the picture of Crocodile should be shown. There should be a back button to get back to the main list OR an option to search for another animal using a Voice Command.

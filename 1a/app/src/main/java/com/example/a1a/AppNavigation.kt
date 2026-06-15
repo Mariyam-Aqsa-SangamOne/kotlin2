@@ -22,5 +22,11 @@ fun AppNavigation() {
         composable("catDogScreen") {
             CatandDogScreen(navController = navController)
         }
+        composable("CowandElephant") {
+            cowandelephant(navController = navController)
+        }
+        composable("GalleryScreen") {
+            GalleryScreen(navController = navController)
+        }
     }
 }

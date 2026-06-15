@@ -31,41 +31,52 @@ fun CatandDogScreen(
         R.raw.bowbow
     )
 
-    Column{
+    Column {
         Row(
-            modifier=modifier
-        ){
+            modifier = modifier
+        ) {
             Image(
-                painter=painterResource(id=R.drawable.cat),
+                painter = painterResource(id = R.drawable.cat),
                 contentDescription = "Cat",
-                modifier=modifier
+                modifier = modifier
                     .size(250.dp)
-                    .clickable{
+                    .clickable {
                         catsound.start()
                     },
                 contentScale = ContentScale.Fit
             )
             Image(
-                painter=painterResource(id=R.drawable.dog),
+                painter = painterResource(id = R.drawable.dog),
                 contentDescription = "Dog",
-                modifier=modifier
+                modifier = modifier
                     .size(250.dp)
-                    .clickable{
+                    .clickable {
                         dogsound.start()
                     },
                 contentScale = ContentScale.Fit
             )
 
         }
-        Button(
-            onClick = {
-                navController.navigate("catScreen")
-            }
+        Row(
+            modifier = modifier
         ) {
-            Text("Previous")
+            Button(
+                onClick = {
+                    navController.navigate("catScreen")
+                }
+            ) {
+                Text("Previous")
+            }
+            Button(
+                onClick = {
+                    navController.navigate("cowandelephant")
+                }
+            ) {
+                Text("Next")
+            }
+
         }
     }
-
 
 
 }
