@@ -69,7 +69,7 @@ fun CatandDogScreen(
             }
             Button(
                 onClick = {
-                    navController.navigate("cowandelephant")
+                    navController.navigate("CowAndElephant")
                 }
             ) {
                 Text("Next")

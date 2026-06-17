@@ -14,19 +14,20 @@ fun AppNavigation() {
         navController = navController,
         startDestination = "catScreen"
     ) {
-
         composable("catScreen") {
             CatScreen(navController = navController)
         }
-
         composable("catDogScreen") {
             CatandDogScreen(navController = navController)
         }
-        composable("CowandElephant") {
-            cowandelephant(navController = navController)
+        composable("CowAndElephant") {
+            CowAndElephant(navController = navController)
         }
         composable("GalleryScreen") {
             GalleryScreen(navController = navController)
+        }
+        composable("ScreenD") {
+            ScreenD(navController = navController)
         }
     }
 }

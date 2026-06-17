@@ -18,7 +18,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 
 @Composable
-fun cowandelephant(
+fun CowAndElephant(
     navController: NavController,
     modifier: Modifier = Modifier
 ) {
