@@ -10,7 +10,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun TableScreen(modifier: Modifier = Modifier) {
+fun TableScreen(
+    onNavigateToCalc:()->Unit
+) {
 
     Column(
         modifier = Modifier
@@ -56,6 +58,9 @@ fun TableScreen(modifier: Modifier = Modifier) {
                         .padding(8.dp)
                 )
             }
+        }
+        Button(onClick = onNavigateToCalc) {
+            Text("Next")
         }
     }
 }
