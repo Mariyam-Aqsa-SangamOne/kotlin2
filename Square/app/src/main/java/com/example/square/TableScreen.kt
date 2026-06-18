@@ -26,34 +26,36 @@ fun TableScreen(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(20.dp))
 
         Row(modifier = Modifier.fillMaxWidth()) {
-            TableCell("Number", isHeader = true)
-            TableCell("Square", isHeader = true)
+            Text("Number",
+                modifier=Modifier
+                    .weight(1f)
+                    .border(1.dp, Color.Black)
+                    .padding(8.dp)
+            )
+
+            Text("Sqaure",
+                modifier=Modifier
+                    .weight(1f)
+                    .border(1.dp, Color.Black)
+                    .padding(8.dp)
+            )
         }
 
         for (i in 1..10) {
             Row(modifier = Modifier.fillMaxWidth()) {
-                TableCell("$i\t\t\t")
-                TableCell("\t\t\t${i * i}")
+                Text("$i",
+                    modifier=Modifier
+                        .weight(1f)
+                        .border(1.dp, Color.Black)
+                        .padding(8.dp)
+                )
+                Text("${i * i}",
+                    modifier=Modifier
+                        .weight(1f)
+                        .border(1.dp, Color.Black)
+                        .padding(8.dp)
+                )
             }
         }
-    }
-}
-
-@Composable
-fun TableCell(text: String, isHeader: Boolean = false) {
-
-    Box(
-        modifier = Modifier
-            .border(1.dp, Color.Black)
-            .padding(12.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = text,
-            style = if (isHeader)
-                MaterialTheme.typography.titleMedium
-            else
-                MaterialTheme.typography.bodyMedium
-        )
     }
 }
