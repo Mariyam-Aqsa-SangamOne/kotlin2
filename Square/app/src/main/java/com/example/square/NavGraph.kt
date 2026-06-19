@@ -32,6 +32,26 @@ fun NavGraph(){
             ScreenC(
                 onBack={
                     navController.popBackStack()
+                },
+                onNext = {
+                    navController.navigate("screenD")
+                }
+            )
+        }
+        composable("screenD") {
+            TableSwipeScreen(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onNext = {
+                    navController.navigate("screenE")
+                }
+            )
+        }
+        composable("screenE") {
+            VerticalSwipeScreen(
+                onBack = {
+                    navController.popBackStack()
                 }
             )
         }

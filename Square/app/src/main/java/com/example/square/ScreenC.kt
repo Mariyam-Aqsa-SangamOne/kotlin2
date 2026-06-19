@@ -12,7 +12,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 
 @Composable
 fun ScreenC(
-    onBack:()->Unit
+    onBack:()->Unit,
+    onNext:()->Unit
 )
 {
     var input1 by remember{ mutableStateOf(("")) }
@@ -86,8 +87,14 @@ fun ScreenC(
                 containerColor = Color.Blue,
                 disabledContainerColor = Color.LightGray
             )
-        ) {
+        )
+        {
             Text("Submit")
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(onClick = onNext) {
+            Text("Next")
         }
 
         Spacer(modifier= Modifier.height(16.dp))
