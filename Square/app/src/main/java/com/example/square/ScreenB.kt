@@ -25,7 +25,7 @@ fun FactScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(35.dp)
     ) {
 
         Button(onClick=onBack){
